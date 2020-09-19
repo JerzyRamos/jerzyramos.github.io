@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@font-face {
+    font-family: 'Avenir';
+    src: URL('avenir-light.ttf') format('truetype');
+}
+:root {
+    --black: #212529;
+    --light: #d5f3f7;
+    --medium: #a9d9db;
+    --dark: #317283;
+    --bright: #0aa8c1;
+  }
+
+body {
+    font-family: 'Avenir', sans-serif;
+    transition: background 0.2s;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight:800;
+    font-size: 70px;
+}
+
+h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight:700;
+    font-size: 35px;
+    display: inline;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size:25px;
+    display:inline;
+}
+
+h4, span {
+    font-size: 17px;
+    display: inline;
+    letter-spacing:0.02em;
+}
+
+h5 {
+    line-height: inherit;
+}
+
+.topbar {
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
+    background:white;
+    z-index:10;
+}
+
+a.nav-link {
+    color:var(--black);
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+a.nav-link:hover {
+    color:var(--bright);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a.nav-link.active {
+    color:var(--bright);
+}
+
+.color-block {
+    position: absolute;
+    top:0;
+    left:0;
+    width:40%;
+    /* height:90%; */
+    height:1000px;
+    background: var(--medium);
+    z-index:-1;
+    min-width:380px;
+}
+
+.container {
+    margin:auto;
+    min-width:960px;
+}
+
+#about-row {
+    width: 80%;
+    height: 100%;
+    margin:auto;
+}
+
+.cardblock {
+    height: 100%;
+    background: var(--light);
+    box-shadow: -12px 12px 17px rgba(124, 128, 138, 0.33);
+    text-align:center;
+}
+
+#profile {
+    border-radius:50%;
+    margin-top:40px;
+    margin-bottom:40px;
+    width:205px;
+    height:205px;
+}
+
+.line {
+    height:0px;
+    width:80px;
+    border-top:2px solid var(--black);
+    margin: 30px auto;
+}
+
+
+.textblock {
+    height: 100%;
+}
+
+a.button{
+    display:inline-block;
+    padding:0.5em 1.0em;
+    border:1px solid var(--black);
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-size: 17px;
+    color:var(--black);
+    transition: all 0.2s;
+    vertical-align: top;
+}
+a.button:hover{
+    color:var(--black);
+    background-color:var(--light);
+}
+
+a.button:hover {
+    font-size:19px;
+}
+
+.bouncy{
+    animation:bouncy 4s infinite linear;
+    position:relative;
+}
+@keyframes bouncy {
+    0%{top:0em}
+    41%{top:0em}
+    42%{top:0.2em}
+    45%{top:-0.8em}
+    47%{top:-0.7em}
+    49%{top:0em}
+    52%{top:-0.2em}
+    54%{top:0em}
+    100%{top:0em;}
+}
+
+.block {
+    width:17px;
+    height:17px;
+    background: var(--dark);
+    display:inline-block;
+    margin: 0 8px 0 0;
+}
+
+.big-block {
+    width:19px;
+    height:19px;
+    background: var(--dark);
+    display:inline-block;
+    margin: 0 10px 3px 0;
+}
+
+#about-container {
+    opacity:0;
+    transition: all 0.5s;
+    transform: translateY(30px);
+    height:510px;
+    /* margin-top:13%; */
+    margin-top:320px;
+}
+
+.tab-pane {
+    transition: all 0.2s;
+}
+
+#project-container {
+    margin-top:250px;
+    text-align:center;
+}
+
+.card-container {
+    width:60%;
+    margin:auto;
+    padding-bottom:250px;
+}
+.card {
+    text-align: left;
+    border:none;
+    border-radius: 0;
+    box-shadow: -12px 12px 13px rgba(124, 128, 138, 0.33);
+    margin-top:100px;
+    transition: all 0.5s;
+    /* cursor:pointer; */
+    color: var(--black);
+    
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: -12px 25px 25px rgba(124, 128, 138, 0.33);
+
+}
+
+.card-body {
+    padding: 15% 10%;
+}
+
+.card-title {
+    margin-bottom: 1.5rem;
+}
+
+.card-img {
+    border-radius: 0;
+}
+
+.bottom-bar {
+    bottom:0;
+    height: 50px;
+    width: 100%;
+    background: white;
+    position:absolute;
+}
+
+.media-container {
+    height:100%;
+    display:inline-block;
+    margin: 0 2px;
+    padding: 0 8px;
+}
+
+.media-icon {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-top:10px;
+    
+}
+
+.media-link {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.media-link:hover {
+    opacity:0.5;
+}

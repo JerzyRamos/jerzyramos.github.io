@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+</head>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
+<script src="script.js"></script>
+
+<body onload="start()">
+    <div class="topbar p-5">
+        <span style="float:left; margin-top:2px;"><div class="block"></div><h3>Jerzy Ramos Chen</h3></span>
+        <nav style="float:right" class="navbar-expand">
+            <ul class="nav navbar-nav" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="about-tab" href="#about" role="tab"  onclick="switchProject('about')">ABOUT ME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="project-tab"  href="#project"  onclick="switchProject('project')">PROJECTS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="resume-tab"  href="img/JerzyRamosChen.pdf" target="blank" >RESUME</a>
+                </li> 
+              </ul>
+            </nav>
+    </div>
+
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+            <div class="color-block"></div>
+            <div class="container" id="about-container">
+                <div class="row" id="about-row">
+                    <div class="cardblock col-5" style="padding:0;">
+                      <img id="profile" src="img/Jerzy-profile.jpg" alt="profile">
+                      <div><h3>Jerzy Ramos Chen</h3></div>
+                      <div class="line"></div>
+                      <span style="letter-spacing: 3px;">Computer Science<br>Undergraduate</span>
+                      <div class="bottom-bar">
+                        <a class="media-link" target="blank" href="https://www.facebook.com/jerzy.ramos"><div class="media-container"><img class="media-icon" src="img/facebook.webp"></div></a>
+                        <a class="media-link" target="blank" href="https://www.linkedin.com/in/jerzy-ramos-chen/"><div class="media-container"><img class="media-icon" src="img/linkedin.webp"></div></a>
+                        <a class="media-link" target="blank" href="https://github.com/JerzyRamos"><div class="media-container"><img class="media-icon" src="img/github.svg" style="width:20px;height:20px;"></div></a>
+                      </div>
+                    </div>
+                    <div class="textblock col-7 pl-5">
+                      <h1>Hello,<br> I'm Jerzy</h1>
+                      <h5 class="py-3">I am a Chinese-Mexican international student studying Computer Science. I am currently a senior at Brigham Young Univerity. I also love software engineering and graphic designing.</h5>
+                      <h2 class="pb-3">Check out my work:</h2>
+                      <a class="button bouncy mr-2" style="cursor:pointer; animation-delay:1.0s" onclick="switchProject('project')">PROJECTS</a>
+                      <a href="img/JerzyRamosChen.pdf" target="blank" class="button bouncy" style="animation-delay:1.1s">RESUME</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="project" role="tabpanel" aria-labelledby="project-tab">
+          <div class="container" id="project-container">
+            <div class="big-block"></div><h6>Projects</h6>
+            <div class="card-container">
+              
+              <a href="https://jerzyramos.github.io/GoodMorning" target="blank">
+                <div class="card"><div class="row no-gutters" id="project-row">
+                  <div class="col-7"><div class="card-body">
+                    <h5 class="card-title">Good Morning Fitness Band</h5>
+                    <p class="card-text">This is a fully-designed website made for a team business idea. It showcases the product idea of a fitness band that helps improve sleep quality.</p>
+                </div></div>
+              <div class="col-5"><img class="card-img" src="img/GoodMorning.jpg" alt="GoodMorning"></div></div></div></a>
+
+              <a href="https://jerzyramos.github.io/Inspire" target="blank">
+                <div class="card"><div class="row no-gutters" id="project-row">
+                  <div class="col-7"><div class="card-body">
+                    <h5 class="card-title">Inspire</h5>
+                    <p class="card-text">A relaxing site that provides inspirational and motivational quotes. It utilizes API service to provide that is continuously refreshed.</p>
+                </div></div>
+              <div class="col-5"><img class="card-img" src="img/Inspire.jpg" alt="Inspire"></div></div></div></a>
+
+              <a href="https://jerzyramos.github.io/Draw-Board" target="blank">
+                <div class="card"><div class="row no-gutters" id="project-row">
+                  <div class="col-7"><div class="card-body">
+                    <h5 class="card-title">Draw Board</h5>
+                    <p class="card-text">A fun project that utilizes Angular. It turns the web page into a canvas. It allows drawing with the mouse in different colors, and includes some challenges.</p>
+                </div></div>
+              <div class="col-5"><img class="card-img" src="img/Drawboard.jpg" alt="Drawboard"></div></div></div></a>
+
+              <a href="https://jerzyr.portfoliobox.net/" target="blank">
+                <div class="card"><div class="row no-gutters" id="project-row">
+                  <div class="col-7"><div class="card-body">
+                    <h5 class="card-title">Graphic Design Portfolio</h5>
+                    <p class="card-text">In my freetime, I picked up graphic design as a hobby and have designed some logos for small businessses. This is a portfolio page that showcases some of my work.</p>
+                </div></div>
+              <div class="col-5"><img class="card-img" src="img/Portfolio.jpg" alt="Portfolio"></div></div></div></a>
+
+              <a href="https://www.youtube.com/watch?v=ZDeX-Rsaa-U" target="blank">
+                <div class="card"><div class="row no-gutters" id="project-row">
+                  <div class="col-7"><div class="card-body">
+                    <h5 class="card-title">Budget Tracker Mobile App</h5>
+                    <p class="card-text">I designed a simple budget tracker application using Android Studio. This is a video of the final prototype of the application.</p>
+                </div></div>
+              <div class="col-5"><img class="card-img" src="img/BudgetTracker.jpg" alt="Portfolio"></div></div></div></a>
+
+              
+
+            </div>
+            
+            
+          </div>
+          
+        </div>
+        <div class="tab-pane fade" id="resume" role="tabpanel" aria-labelledby="resume-tab">123</div>
+        
+    </div>
+
+</body>
