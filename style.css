@@ -237,6 +237,7 @@ a.button:hover {
 
 .card-img {
     border-radius: 0;
+    height: 100%;
 }
 
 .bottom-bar {
